@@ -27,6 +27,7 @@ public class BookmarkController {
         return bookmarkService.getBookmarkByDTOProjection(page);
     }
 
+    // Search bookmarks by title
     @GetMapping("/search")
     public BookmarksDto searchBookmark(@RequestParam(name = "query") String query,
                                       @RequestParam(name = "page", defaultValue = "1") Integer page) {
